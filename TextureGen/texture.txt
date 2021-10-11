@@ -1,0 +1,117 @@
+-----------------------------------------------
+TEXTURE V.0.5 (C)2K2 BY THE TOXIC AVENGER/AINC.
+-----------------------------------------------
+
+------------
+INTRODUCTION
+------------
+
+Texture is a simple (delphi-)program to
+create TextureMaps, BackgroundGFX and
+of course, psychedelic Pictures.. =)
+
+The resulting files can be used with delphi
+or fpc by including the texture-unit
+("tex.pas") also included in this package..
+
+Different from "professional" DTP-Progs
+(like f.e. PhotoShop), Texture does not
+need to save the resulting Bitmap-Files,
+but it saves the steps which were used
+to create the final image..
+These steps may be included directly
+as Pascal (delphi/fpc) Source..
+So it's possible to 'store' a 512x512-RGB
+Bitmap in full quality at only about
+100 Bytes (!!)..
+(not to mention that it would also be
+possible to store a 4096x4096-RGB
+within those few bytes =)
+
+For all Users who don't want to create
+64KB-3D-Intros =) there's also a "normal"
+BMP-Export and a TEX-File-Save.
+
+-----
+USAGE
+-----
+
+Just play around.. =)
+It's really easy..
+
+Basics:
+-There are 4 Layers and the final image ("Final Layer")..
+-On every layer you can experiment with the Renderers and
+ different combinations of Color/Filter/Distort-Functions..
+-The Randomize Button is always good for experiments..
+
+-Render puts out the "basic" image..
+-Color changes Color-Values (in RGB- or HSV-Color-Space)..
+-Filter is like the dtp-filters you should already know.. 8-)
+-Distort displaces/wobbles the image..
+-Layer Combine is used to arrange the final
+ image from the 4 Layers..
+ ("Distort"=Distort Layer1 through Layer2 (%1=X-Distort, %2=Y-Distort),
+  "Add"=Add/Subtract Layers, "Mul"=Multiply Layers,
+  "Max"=Maximum Value of Layer1/2, "Min"=Minimum Value of Layer1/2,
+  "Random"=Random Pixels combined from Layers,
+  "Xor"/"And"/"Or"=Xor/And/Or (Binary Ops) Layers,
+  "Nothing"=Do Nothing)
+
+
+To include the pictures directly in your delphi/fpc
+project take a look at "TexITest.pas"..
+
+To load TEX-Files into your delphi/fpc project
+during runtime take a look at "TexLTest.pas".
+
+----
+MISC
+----
+
+Feel free to use, enhance or even learn about this code..
+If you like it, please drop a message to:
+
+ toxie@ainc.de
+
+Your opininons, optimizations and enhancements will
+influence the further development of Texture..
+
+To get the newest version of Texture surf to:
+
+ http://ainc.de
+
+(Contains also lots of other interesting =) things..)
+
+so long..
+ carsten aka toxic avenger/ainc.
+
+-------
+HISTORY
+-------
+
+-v.0.1: -First Public Release..
+-v.0.2: -Enhanced Embossing-Filter, Tiling..
+        -Added Sharpen-Filter, Horizontal/Vertical Edge-Finding..
+        -Added CheckerBoard-, Blobs-Renderer..
+        -Added Noise-, 3D-Tunnel-Distort, X/Y-Translation, Kaleidoscope-Mirror..
+        -Added Color-Equalize (Full Range & Area Stretch)..
+        -Added easy runtime-loading of TEX-Files into Tex-Unit..
+        -Added full featured, nearly unlimited Undo, Redo.. (+Clear ;)
+         (even works with already saved TEX-files!)
+        -Some slight speed Optimizations..
+-v.0.3: -'Bugfixed' Horizontal/Vertical Edge-Filters..
+        -Added Sculpture-Distort..
+        -Added Motion Blur-, Median Cut-, Dilate-, Erode-Filters and a
+         Make Tilable-Operation to use with Tiling/Kaleidoscope..
+        -More tiny speed Optimizations..
+        -Online Help/Hints for the Delphi-Prog..
+        -Changeable Resolution for the Layers..
+-v.0.4: -Added 6 Layer Combiners: And, Or, Xor, Max, Min and Random..
+        -Added {$MODE DELPHI}.. ;)
+        -Unified FPC/Delphi Test-Progs.. ;)
+        -Renamed Combiner "Off" into "Nothing".. Shouldn't bother anyone..
+-v.0.5: -Added Cell Machine, Mandelbrot-Renderers
+        -Added Log Polar-Transform
+        -'Bugfixed' Sculpture-Filter
+        -New Stack-Button in the GUI to change design steps more easily..
